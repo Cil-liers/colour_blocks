@@ -8,9 +8,6 @@ running = True
 
 my_sprites = pygame.sprite.Group()
 
-
-
-
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -24,15 +21,7 @@ while running:
 
         my_sprites.remove(blk)
         touched_blocks = pygame.sprite.spritecollide(blk, my_sprites, False)
-    
-        # blk.blocks_above = []
         blk.blocks_below = []
-        # if touched_blocks != 0:
-        #     for i in touched_blocks:
-        #         if i.rect.bottom < blk.rect.bottom:
-        #             blk.blocks_above.append(i)
-        #         else:
-        #             blk.blocks_below.append(i)
         if touched_blocks != 0:
             for i in touched_blocks:
                 if i.rect.bottom > blk.rect.bottom:
