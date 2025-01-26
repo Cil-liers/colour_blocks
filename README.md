@@ -11,3 +11,6 @@ I found it difficult making the blocks fall if a block underneath it had disappe
 ### Note
 This is not necessarily the end of the project, it is a work in progress that I intend to change and evolve!
 
+
+## Updates (2025/01/26)
+Blocks now cannot be created where other blocks exist and blocks land with minimal overlapping
