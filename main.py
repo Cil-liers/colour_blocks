@@ -15,7 +15,8 @@ while running:
 
         elif event.type == pygame.MOUSEBUTTONDOWN:
             new_block = Block(pygame.mouse.get_pos())
-            my_sprites.add(new_block)
+            if len(pygame.sprite.spritecollide(new_block, my_sprites, False) == 0:
+                my_sprites.add(new_block)
 
     for blk in my_sprites:
 
@@ -26,6 +27,7 @@ while running:
             for i in touched_blocks:
                 if i.rect.bottom > blk.rect.bottom:
                     blk.blocks_below.append(i)
+                    blk.rect.bottom = i.rect.top+1
 
         if len(blk.blocks_below) != 0:
             blk.moving = False
