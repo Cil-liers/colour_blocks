@@ -15,7 +15,7 @@ while running:
 
         elif event.type == pygame.MOUSEBUTTONDOWN:
             new_block = Block(pygame.mouse.get_pos())
-            if len(pygame.sprite.spritecollide(new_block, my_sprites, False) == 0:
+            if len(pygame.sprite.spritecollide(new_block, my_sprites, False)) == 0:
                 my_sprites.add(new_block)
 
     for blk in my_sprites:
